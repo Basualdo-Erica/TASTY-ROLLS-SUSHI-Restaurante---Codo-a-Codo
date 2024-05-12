@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="restaurante.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Bon Appétit</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <a class="logo" href="#">Bon Appétit</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Reservación</a></li>
+                <li><a href="#">Menú</a></li>
+            </ul>
+            <i class='bx bx-align-right' id="burger"></i>
+        </nav>
+    </header>
+    <main class="flexContainer">
+        <div class="item">
+            <p>Reservar <br>una mesa</p>
+        </div>
+        <div class="form-container">
+            <form action="formulario" method="post">
+                <h1 id="tituloReserva">Reservación</h1>
+                <div class="casilla1">
+                    <label for="nombre"></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                </div>
+                <div class="casilla1">
+                    <label for="apellido"></label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+                </div>
+                <div class="casilla1">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="casilla2">
+                    <label for="calendario">Fecha de reserva</label>
+                    <input type="date" value="2024-12-31" min="2024-01-05" id="calendario" name="calendario">
+                </div>
+                <div class="casilla2">
+                    <label for="personas">Número de personas</label>
+                    <select name="personas" id="personas" title="Número de personas">
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="5">5 personas</option>
+                        <option value="6">6 personas</option>
+                    </select>
+                    <button type="reset">Reservar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="fila1">
+            <a href="https://maps.app.goo.gl/z4DDqR3LLip4tbEG6" target="blank">Av. 14 5098, B1880 Berazategui, Provincia de Buenos Aires</a>
+            <p>© 2024 Bon Appétit. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-contenedor">
+            <div class="redes">
+                <p>Nuestras redes</p>
+                <i class='bx bxl-facebook-square'></i>
+                <i class='bx bxl-instagram' ></i>
+                <i class='bx bxl-twitter' ></i>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
+
+

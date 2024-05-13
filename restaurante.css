@@ -8,7 +8,7 @@
 }
 body{
     font-family:'Poppins', sans-serif;
-    background: #f2e7d0;
+    background: black;
 }
 header {
     color: #fff;
@@ -23,7 +23,7 @@ header {
 }
 
 header.abajo {
-    background: #90553C;
+    background: black;
     padding: 15px 20px;
 }
 
@@ -32,6 +32,8 @@ header.abajo {
     font-size: 27px;
     font-weight: bold;
     text-decoration: none;
+    flex: 1;
+    text-align: left;
 }
 
 header.abajo .logo,
@@ -46,20 +48,25 @@ header.abajo ul li a {
 }
 
 .menu ul {
-    
     display: flex;
+    margin: 0;
+    padding: 0 
 }
+
 
 .menu-ul-visible {
     display: flex !important; 
 }
 
 .menu ul li {
-    margin-right: 20px;
+    margin: 0 10px;
+}
+.menu ul li:first-child {
+    margin-left: 0;
 }
 
 .menu ul li a {
-    color: #90553C;
+    color: white;
     font-weight: bold;
     text-decoration: none;
     font-size: 20px;
@@ -67,7 +74,7 @@ header.abajo ul li a {
 }
 
 .menu ul li a:hover {
-    color: #85A36A;
+    color: red;
 }
 
 .flexContainer {
@@ -93,11 +100,11 @@ header.abajo ul li a {
     position: relative;
     background:
     linear-gradient( rgba(0,0,0,0.5),rgba(0,0,0,0.5) ),
-    url('img/pexels-life-of-pix-67468.jpg');
+    url('img/marina-grynykha-FBgCgJhPO2I-unsplash.jpg');
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
-    min-height: 70vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -115,7 +122,7 @@ header.abajo ul li a {
 }
 
 .form-container {
-    margin-top: 100px;
+    margin-top: 50px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -125,19 +132,15 @@ header.abajo ul li a {
 }
 
 #tituloReserva {
-    color: #85A36A;
+    color: red;
     text-align: left;
     font-size: 30px;
 }
 
-.casilla1,
-.casilla2 {
+.casilla1 {
     margin-bottom: 20px;
     width: 250px;
     transition: 0.3s ease;
-}
-.casilla1 .casilla2:focus {
-    border-color: #002aff;
 }
 
 label {
@@ -152,20 +155,35 @@ label {
     width: 100%;
 }
 
-input,
-select {
+input {
     all: unset;
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
+    background: black;
     border-radius: 0.9375rem; 
-    transition: 0.3s ease
+    transition: 0.3s ease;
+    color: white;
 }
 
-input,
-select:focus {
-    border-color: #85A36A;
+input:focus {
+    border-color: red;
+}
+
+textarea {
+    all: unset;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* background: rgba(255, 255, 255, 0.2); */
+    background: black;
+    border-radius: 0.9375rem; 
+    transition: 0.3s ease;
+    color: white;
+}
+textarea:focus{
+    border-color: red;
 }
 
 button {
@@ -173,8 +191,8 @@ button {
     max-width: 500px; 
     margin: 50px auto;
     margin-left: 10px;
-    background-color: #85A36A;
-    color: #333;
+    background-color: red;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 50px;
@@ -182,11 +200,19 @@ button {
 }
 
 button:hover {
-    background-color: #96b67a;
+    background-color: #ff2b2b;
+}
+
+
+iframe {
+    filter: grayscale(90%) invert(100%) sepia(50%);
+    max-height: 50vh;
 }
 
 footer {
-    background-color: #90553C;
+    background-color: black;
+    background: linear-gradient(to top, rgb(13, 13, 13), rgba(0, 0, 0, 0));
+    /* background-color: #90553C; */
     color: #f2e7d0;
     padding: 20px;
     text-align: center;
@@ -211,7 +237,7 @@ footer {
     transition: color 0.3s ease-in-out
 }
 .fila1 a:hover {
-    color: #85A36A;
+    color: red;
 }
 
 footer .redes {
@@ -231,7 +257,7 @@ footer .redes i {
 }
 
 footer .redes i:hover {
-    color: #96b67a;
+    color: red;
 }
 
 .footer-contenedor {
@@ -241,12 +267,11 @@ footer .redes i:hover {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     .flexContainer {
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        height: max-content;
     }
 
     .form-container {
@@ -258,9 +283,10 @@ footer .redes i:hover {
         order: 1;
     }
 
-    ul {
-        flex-direction: column;
-    }
+    /* ul a {
+        display: none;
+    } */
+
     .menu {
         display: flex;
         justify-content: space-between;
@@ -270,10 +296,11 @@ footer .redes i:hover {
     .menu ul {
         display: none;
     }
+
     .menu-ul-visible {
         display: flex !important; 
         flex-direction: column; 
-        background-color: #f2e7d0;
+        background-color: black;
         padding: 10px; 
         position: absolute;
         top: 100%; 
@@ -283,25 +310,29 @@ footer .redes i:hover {
     }
 
     header.abajo ul li a {
-    color: #85A36A;
-}
+        color: red;
+    }
+
+    .logo {
+        flex: 1;
+        text-align: left;
+    }
 
     .bx-align-right {
         display: block;
         font-size: 35px;
         margin: 0 10px;
-        color: #f2e7d0;
+        color: white;
         cursor: pointer;
         transition: color 0.3s ease-in-out;
     }
 
     .bx-align-right:hover {
-        color: #85A36A;
+        color: red;
     }
 
-
     footer {
-            flex-direction: column;
+        flex-direction: column;
     }
 
     .fila1 {
@@ -318,7 +349,7 @@ footer .redes i:hover {
 
 
 /* Estilos para pantallas de escritorio */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1000px) {
     #burger {
         display: none;
     }

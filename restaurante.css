@@ -294,6 +294,10 @@ iframe {
         color: white;
     }
 
+    .navbar-a-visible.active .logo {
+        display: none;
+    }
+
     .logo {
         color: white;
         font-size: 27px;
@@ -335,22 +339,9 @@ iframe {
         margin: 10px 0; /* Agregar margen entre elementos */
         text-align: center; /* Alinear el texto a la izquierda */
     }
+}
 @media screen and (min-width: 1000px) {
-    .bx-align-right {
+    #burger {
         display: none;
     }
-
-    .navbar {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-item {
-        display: block; 
-    }
 }
-
-
-
-
-

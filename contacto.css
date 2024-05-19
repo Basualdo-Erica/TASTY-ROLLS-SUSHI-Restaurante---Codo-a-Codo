@@ -249,7 +249,7 @@ iframe {
     .flexContainer {
         flex-direction: column;
         align-items: center;
-        height: max-content; /* Solución para la superposición */
+        height: max-content;
     }
 
     .form-container {
@@ -268,7 +268,7 @@ iframe {
     }
 
     .nav-item {
-        display: none; /* Ocultar los elementos del menú por defecto */
+        display: none; 
     }
 
     .navbar-a-visible.active {
@@ -279,15 +279,15 @@ iframe {
     }
 
     .navbar-a-visible.active .nav-item {
-        display: block; /* Mostrar los elementos del menú cuando está activo */
-        padding: 10px 0; /* Espaciado entre elementos para evitar superposición */
-        width: 100%; /* Asegurar que cada elemento ocupe toda la anchura disponible */
+        display: block; 
+        padding: 10px 0; 
+        width: 100%; 
     }
 
     .nav {
         display: flex;
-        flex-direction: column; /* Cambiar a columna para dispositivos móviles */
-        align-items: center; /* Centrar los elementos */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     header.abajo a {
@@ -319,8 +319,8 @@ iframe {
         color: white;
         cursor: pointer;
         transition: color 0.3s ease-in-out;
-        text-align: right; /* Asegurarse de que el texto esté alineado a la izquierda */
-        margin-left: auto; /* Asegurar que el logo se alinee a la izquierda */
+        text-align: right;
+        margin-left: auto; 
     }
 
     .bx-align-right:hover {
@@ -328,16 +328,16 @@ iframe {
     }
 
     .footer-content {
-        flex-direction: column; /* Cambiar a disposición de columna */
-        align-items: center; /* Centrar los elementos en la columna */
+        flex-direction: column;
+        align-items: center; 
     }
 
     .link,
     .input-footer,
     .button-footer {
-        max-width: none; /* Eliminar la máxima anchura establecida anteriormente */
-        margin: 10px 0; /* Agregar margen entre elementos */
-        text-align: center; /* Alinear el texto a la izquierda */
+        max-width: none; 
+        margin: 10px 0; 
+        text-align: center; 
     }
 }
 @media screen and (min-width: 1000px) {

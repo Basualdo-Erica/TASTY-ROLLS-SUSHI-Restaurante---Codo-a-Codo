@@ -220,17 +220,18 @@ iframe {
 .link a:hover {
     color: red;
 }
-
 .input-footer {
     all: unset;
     width: 100%;
     padding: 10px;
     background: rgba(0, 0, 0, 0);
     transition: 0.3s ease;
-    color: rgba(0, 0, 0, 0);
-    border: 1px solid;
-    border-bottom-color: #ffffff;
+    color: white; 
+    border: none; 
+    border-bottom: 1px solid white;
 }
+
+
 
 .button-footer {
     all: unset;
@@ -242,6 +243,14 @@ iframe {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
+}
+
+/* Estilos para los mensajes de error */
+.error-message {
+    color: red;
+    margin-top: 5px;
+    font-size: 12px;
+    display: none;
 }
 
 /* Media Queries */

@@ -26,25 +26,30 @@
             <p>Lorem ipsum<br>dolor sit amet</p>
         </div>
         <div class="form-container">
-            <form action="formulario" method="post">
+            <form id="reservationForm" action="formulario" method="post">
                 <h1 id="tituloReserva">Tus datos</h1>
+                <div id="reservationError" class="error-message"></div>
                 <div class="casilla1">
                     <label for="nombre"></label>
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                    <div id="nombreError" class="error-message"></div>
                 </div>
                 <div class="casilla1">
                     <label for="apellido"></label>
                     <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+                    <div id="apellidoError" class="error-message"></div>
                 </div>
                 <div class="casilla1">
                     <label for="email"></label>
                     <input type="email" name="email" id="email" placeholder="Email">
+                    <div id="emailError" class="error-message"></div>
                 </div>
                 <div>
                     <label for="mensaje"></label>
                     <textarea name="mensaje" id="mensaje" placeholder="Escriba aquí su mensaje..."></textarea>
+                    <div id="mensajeError" class="error-message"></div>
                 </div>
-                <button type="reset">Reservar</button>
+                <button type="submit">Reservar</button>
             </form>
         </div>
     </main>
@@ -74,12 +79,15 @@
 
             <div class="link">
                 <h3>Enterate de nuestras promociones</h3>
-                <form action="#">
+                <form id="subscribeForm" action="#">
+                    <div id="subscribeError" class="error-message"></div>
                     <label for="nombre" class="label-footer"></label>
-                    <input class="input-footer" type="text" id="nombre" name="nombre" placeholder="Nombre">
+                    <input class="input-footer" type="text" id="subscribeNombre" name="nombre" placeholder="Nombre">
+                    <div id="subscribeNombreError" class="error-message"></div>
                     <label for="email" class="label-footer"></label>
-                    <input class="input-footer" type="email" nombre="email" id="nombre" placeholder="Email">
-                    <button class="button-footer" type="reset">Subscribirse</button>
+                    <input class="input-footer" type="email" name="email" id="subscribeEmail" placeholder="Email">
+                    <div id="subscribeEmailError" class="error-message"></div>
+                    <button class="button-footer" type="submit">Subscribirse</button>
                 </form>
             </div>
         </div>

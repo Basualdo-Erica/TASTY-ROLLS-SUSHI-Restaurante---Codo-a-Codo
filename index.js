@@ -82,3 +82,36 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+
+ // Funcionalidad de los modales para las cards
+document.addEventListener('DOMContentLoaded', function () {
+    const orderButtons = document.querySelectorAll('.order-button');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close');
+
+    orderButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            modal.style.display = 'none';
+        });
+    });
+
+    window.addEventListener('click', function(event) {
+        modals.forEach(modal => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+});
+

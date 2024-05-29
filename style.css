@@ -24,9 +24,16 @@ header {
     transition: 0.7s;
 }
 
+header p{
+    font-size: 18px;
+    text-align: center;
+    background-color: red;
+    padding: 5px 0px; 
+}
+
 header.abajo {
     background: black;
-    padding: 15px 20px;
+    padding-top: 15px;
 }
 
 header.abajo .logo,
@@ -40,13 +47,14 @@ header.abajo a {
     justify-content: center;
     align-items: center;
     background-color: black;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 
 .nav-item a {
     color: white;
-    padding: 0 20px;
+    padding: 10px 30px;
+    letter-spacing: 2px;
     font-weight: bold;
     text-decoration: none;
     font-size: 20px;
@@ -62,6 +70,7 @@ header.abajo a {
     font-size: 27px;
     font-weight: bold;
     text-align: center;
+    padding: 0 30px;
 }
 
 /* estilos para contacto.html*/
@@ -195,13 +204,13 @@ iframe {
 .imagen {
     position: relative;
     background:
-    linear-gradient( rgba(0,0,0,0.3),rgba(0,0,0,0.3) ),
-    url('img/mahmoud-fawzy-FBezBX26dyY-unsplash.jpg');
+    /* linear-gradient( rgba(0,0,0,0.3),rgba(0,0,0,0.3) ), */
+    url('img/sushiportada.jpg');
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
     height: 100px;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -231,65 +240,149 @@ iframe {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 30px;
-    padding: 100px 200px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+    padding: 50px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto; 
 }
 
+/* Estilos para las tarjetas */
 .card {
     background-color: #F5F5F5;
     border: 1px solid #dddddd7c;
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
-}
-.card:hover {
-    border-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 0;
 }
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 200px; 
+    object-fit: cover;
+    margin: 0; 
 }
 
 .card h2 {
     font-size: 20px;
     margin: 0.5rem 0;
+    padding: 0 20px;
+
 }
 
-.card p {
-    font-size: 16px;
-    padding: 0 1rem 1rem 1rem;
-}
 .price-button-container {
     display: flex;
+    flex-direction: initial; 
     align-items: center; 
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    padding: 10px 20px; 
 }
 
 p.precio {
     font-size: 30px;
-    padding: 0 1rem 0 1rem;
+    margin: 10px 0; 
 }
 
 .order-button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.order-button:hover {
+    background-color: #ff6161;
+}
+
+/*Modal*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+.modal img {
     width: 100%;
-    max-width: 100px;
+    height: auto;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.stars i {
+    color: gold;
+    margin: 0 2px;
+}
+
+.precio-modal {
+    font-size: 1.5em;
+    color: green;
+    margin: 10px 0;
+}
+
+.comprar-ahora,
+.añadir-carro {
+    width: 100%;
+    max-width: 200px;
     background-color: red;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    margin: 10px 0;
 }
 
-
-
-
-
-
-
-
+.comprar-ahora:hover,
+.añadir-carro:hover {
+    background-color: #ff2b2b;
+}
 
 /* Footer */
 .footer {
@@ -419,7 +512,6 @@ p.precio {
         display: none;
     }
 
-
     .bx-align-right {
         display: block;
         font-size: 35px;
@@ -435,6 +527,29 @@ p.precio {
         color: red;
     }
 
+    .grid-container {
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr); /* Ajusta las columnas para pantallas más pequeñas */
+    }
+
+    /* .card img {
+        height: 150px;
+    } */
+
+    .price-button-container {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    p.precio {
+        font-size: 24px;
+    }
+
+    .order-button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: center; 
@@ -447,9 +562,19 @@ p.precio {
         margin: 10px 0; 
         text-align: center; 
     }
+
+
 }
 @media screen and (min-width: 1000px) {
     #burger {
         display: none;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        padding: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+

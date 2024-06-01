@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>TASTY R🔴LLS SUSHI</title>
 </head>
 <body>
@@ -311,6 +312,23 @@
         </div>
     </div>
 
+    <div id="carrito-compras">
+        <i class='bx bx-cart-alt bx-tada'></i>
+    </div>
+
+    <!-- Modal del carrito -->
+    <div id="modalCarrito" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tus Productos</h2>
+            <div id="carrito-items">
+                <!-- Aquí se añadirán los elementos del carrito -->
+            </div>
+            <p class="precio-modal">Total: $<span id="carrito-total">0</span></p>
+            <button class="comprar-ahora">Comprar Ahora</button>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="footer-content container">
             <div class="link">
@@ -318,8 +336,8 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Sobre nosotros</a></li>
-                    <li><a href="#">Menú</a></li>
-                    <li><a href="#">Contacto</a></li>                
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>                
                 </ul>
             </div>
 
@@ -333,18 +351,18 @@
             </div>
 
             <div class="link">
-                <h3>Enterate de nuestras promociones</h3>
+                <h3>Entérate de nuestras promociones</h3>
                 <form id="subscribeForm" action="#">
                     <div id="subscribeError" class="error-message"></div>
-                    <label for="nombre" class="label-footer"></label>
+                    <label for="subscribeNombre" class="label-footer"></label>
                     <input class="input-footer" type="text" id="subscribeNombre" name="nombre" placeholder="Nombre">
                     <div id="subscribeNombreError" class="error-message"></div>
-                    <label for="email" class="label-footer"></label>
-                    <input class="input-footer" type="email" name="email" id="subscribeEmail" placeholder="Email">
+                    <label for="subscribeEmail" class="label-footer"></label>
+                    <input class="input-footer" type="email" id="subscribeEmail" name="email" placeholder="Email">
                     <div id="subscribeEmailError" class="error-message"></div>
                     <button class="button-footer" type="submit">Subscribirse</button>
                 </form>
-            </div>
+            </div>            
         </div>
     </footer>
     

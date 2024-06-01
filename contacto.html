@@ -45,9 +45,20 @@
                     <input type="email" name="email" id="email" placeholder="Email">
                     <div id="emailError" class="error-message"></div>
                 </div>
+                <div class="casilla1">
+                    <label for="motivo"></label>
+                    <select id="motivo" name="motivo">
+                        <option value="Motivo">Motivo...</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="queja">Queja</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <div id="motivoError" class="error-message"></div>
+                </div>
                 <div>
-                    <label for="mensaje"></label>
-                    <textarea name="mensaje" id="mensaje" placeholder="Escriba aquí su mensaje..."></textarea>
+                    <label for="message"></label>
+                    <textarea name="message" id="message" placeholder="Escriba aquí su mensaje..."></textarea>
                     <div id="mensajeError" class="error-message"></div>
                 </div>
                 <button type="submit">Reservar</button>
@@ -64,8 +75,8 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Sobre nosotros</a></li>
-                    <li><a href="#">Menú</a></li>
-                    <li><a href="#">Contacto</a></li>                
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>                
                 </ul>
             </div>
 
@@ -79,20 +90,23 @@
             </div>
 
             <div class="link">
-                <h3>Enterate de nuestras promociones</h3>
+                <h3>Entérate de nuestras promociones</h3>
                 <form id="subscribeForm" action="#">
                     <div id="subscribeError" class="error-message"></div>
-                    <label for="nombre" class="label-footer"></label>
+                    <label for="subscribeNombre" class="label-footer"></label>
                     <input class="input-footer" type="text" id="subscribeNombre" name="nombre" placeholder="Nombre">
                     <div id="subscribeNombreError" class="error-message"></div>
-                    <label for="email" class="label-footer"></label>
-                    <input class="input-footer" type="email" name="email" id="subscribeEmail" placeholder="Email">
+                    <label for="subscribeEmail" class="label-footer"></label>
+                    <input class="input-footer" type="email" id="subscribeEmail" name="email" placeholder="Email">
                     <div id="subscribeEmailError" class="error-message"></div>
                     <button class="button-footer" type="submit">Subscribirse</button>
                 </form>
-            </div>
+            </div> 
         </div>
     </footer>
     <script src="index.js"></script>
 </body>
 </html>
+
+
+

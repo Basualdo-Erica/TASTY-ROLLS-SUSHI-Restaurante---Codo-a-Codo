@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Form validation
+    // validacion
     const reservationForm = document.getElementById('reservationForm');
     const subscribeForm = document.getElementById('subscribeForm');
 
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
- // Funcionalidad de los modales para las cards
+ // funcionalidad de los modales para las cards
 document.addEventListener('DOMContentLoaded', function () {
     const orderButtons = document.querySelectorAll('.order-button');
     const modals = document.querySelectorAll('.modal');
@@ -115,3 +115,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// obtener elementos del DOM
+const carritoIcon = document.getElementById('carrito-compras');
+const modalCarrito = document.getElementById('modalCarrito');
+const closeCarrito = modalCarrito.querySelector('.close');
+
+// para abrir el modal del carrito
+function openCarritoModal() {
+    modalCarrito.style.display = 'block';
+}
+
+// para cerrar el modal del carrito
+function closeCarritoModal() {
+    modalCarrito.style.display = 'none';
+}
+
+// para abrir y cerrar el modal del carrito
+carritoIcon.addEventListener('click', openCarritoModal);
+closeCarrito.addEventListener('click', closeCarritoModal);
+
+// cerrar el carrito al hacer clic fuera del contenido del modal
+window.addEventListener('click', (event) => {
+    if (event.target == modalCarrito) {
+        closeCarritoModal();
+    }
+});

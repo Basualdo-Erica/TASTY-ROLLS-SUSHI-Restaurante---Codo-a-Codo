@@ -298,7 +298,7 @@ iframe {
 .imagen {
     position: relative;
     background:
-    /* linear-gradient( rgba(0,0,0,0.3),rgba(0,0,0,0.3) ), */
+    linear-gradient( rgba(0,0,0,0.3),rgba(0,0,0,0.3) ),
     url('img/sushiportada.jpg');
     background-size: cover;
     background-position: center bottom;
@@ -527,12 +527,17 @@ p.precio {
     max-width: 500px;
     margin: 20px auto;
     margin-left: 10px;
-    background-color: red;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
 }
+.button-footer:hover {
+    background-color: red;
+    color: white;
+}
+
 
 /* Estilos para los mensajes de error */
 .error-message {
@@ -543,7 +548,7 @@ p.precio {
 }
 
 /* Media Queries para tablets*/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1023px) {
     .flexContainer {
         flex-direction: column;
         align-items: center;
@@ -660,7 +665,7 @@ p.precio {
 }
 
 /* Media Queries para celulares */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     .grid-container {
         padding: 20px;
         grid-template-columns: repeat(1, 1fr);
@@ -718,7 +723,7 @@ p.precio {
 }
 
 /* Media Queries para pantallas grandes */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
     #burger {
         display: none;
     }

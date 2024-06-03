@@ -313,7 +313,7 @@ button:active {
 .banner-sobre-nosotros {
     width: 100%;
     height: 100vh;
-    background-image: url(img/nosotros2.jpeg);
+    background-image: url(img/nosotros1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -374,7 +374,7 @@ button:active {
   width: 100%;
   height: 80vh;
   border-radius: 50px;
-  background-image: url(img/nosotros2.jpeg);
+  background-image: url(img/nosotros1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -453,51 +453,77 @@ button:active {
 @media screen and (max-width: 767px) {
   
   
-  .grid-container {
+.grid-container {
     padding: 20px;
     grid-template-columns: repeat(1, 1fr);
 }
 
-.navbar-a-visible.active {
-    background-color: black;
+.navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-item {
-    display: none;
-    padding: 10px 0px;
-    width: 100%;
-    text-align: center;
+  display: none; 
+}
+
+.navbar-a-visible.active {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  text-align: center;
 }
 
 .navbar-a-visible.active .nav-item {
-    display: block;
+  display: block; 
+  padding: 10px 0px; 
+  width: 100%; 
 }
 
 .nav {
-    align-items: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
 }
+
+header.abajo a {
+  color: white;
+}
+
+.navbar-a-visible.active .logo {
+  display: none;
+}
+
 
 .logo {
-    text-align: center;
-    font-size: 23px;
-    font-weight: bold;
-    color: white;
-    display: flex;
-    order: -1;
+  color: white;
+  font-size: 27px;
+  font-weight: bold;
+  display: flex;
+  text-align: right;
+  order: -1;
 }
 
+.hidden {
+  display: none;
+}
+
+
 .bx-align-right {
-    all: unset;
-    max-width: 500px;
-    margin: 20px auto;
-    margin-left: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
+  display: block;
+  font-size: 35px;
+  margin: 0px 10px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  text-align: left;
+  margin-left: auto; 
 }
 
 .bx-align-right:hover {
-    color: red;
+  color: red;
 }
 
 .grid-container {
@@ -649,7 +675,7 @@ button:active {
       
       
       .banner-sobre-nosotros {
-        background-image: url(img/nosotros1.jpeg);
+        background-image: url(img/nosotros2.jpeg);
       }
       
       .bienvenida {
